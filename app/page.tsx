@@ -1,95 +1,83 @@
+import React from "react";
 import Image from "next/image";
-import styles from "./page.module.css";
+import "./globals.scss";
+import PLP from "./components/PLP/PLP";
+import collections from "@/data/data.json";
+import HomeProducts from "./components/HomeProducts/HomeProducts";
 
-export default function Home() {
+interface picksproducts {
+  id: number;
+  name: string;
+  price: string;
+}
+
+interface newsummer {
+  id: number;
+  name: string;
+  price: string;
+}
+
+interface Data {
+  picksproducts: picksproducts[];
+  newsummer: newsummer[];
+}
+
+const page = () => {
+  const data: Data = collections;
+  const picksproducts = data.picksproducts;
+  const newsummer = data.newsummer;
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+    <div>
+      <div>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="https://static.lefties.com/9/static2/itxwebstandard/images/grid/header/ocean/banner_en.jpg?v=20220630023204191361529"
+          alt="Banner"
+          width={900}
+          height={900}
+          className="banner-img"
         />
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className="collection-seccion">
+        <div>
+          <Image
+            src="https://static.lefties.com/9/photos2/2022/I/0/1/p/1703/306/800/09/1703306800_5_1_1.jpg?t=1656410932473"
+            alt="banner"
+            width={900}
+            height={900}
+            className="banner-img-2"
+          />
+        </div>
+        <div className="picks-products-wrapper">
+          <p className="text-picks-p">The new summer 2023 collection is here</p>
+          <div className="picks-products">
+            {picksproducts.map((item) => (
+              <HomeProducts items={item}></HomeProducts>
+            ))}
+          </div>
+        </div>
       </div>
-    </main>
+      <div className="collection-seccion">
+        <div className="collection-seccion-wrapper">
+          <p className="text-new-summer-p">Our picks for you</p>
+          <div className="new-summer">
+            {newsummer.map((item) => (
+              <HomeProducts items={item}></HomeProducts>
+            ))}
+          </div>
+        </div>
+        <div>
+          <Image
+            src="https://static.lefties.com/9/photos2/2022/I/0/1/p/1703/306/402/01/1703306402_6_1_1.jpg?t=1656410931629"
+            alt="banner"
+            width={450}
+            height={550}
+            className="banner-img-3"
+          />
+        </div>
+      </div>
+    </div>
   );
-}
+};
+
+export default page;

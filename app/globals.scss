@@ -1,0 +1,41 @@
+.banner-img {
+  width: 100%;
+  height: auto;
+  margin: 50px 0px;
+}
+
+.collection-seccion {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+  .banner-img-2 {
+    width: 550px;
+    height: 505px;
+  }
+  .banner-img-3 {
+    width: 430px;
+    height: 540px;
+  }
+}
+
+.picks-products-wrapper{
+  .text-picks-p {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .picks-products {
+    display: flex;
+  }
+}
+
+.collection-seccion-wrapper {
+  .text-new-summer-p {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .new-summer {
+    display: flex;
+  }
+}

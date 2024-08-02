@@ -1,0 +1,90 @@
+{
+  "accesorios": [
+    {
+      "id": 1,
+      "name": "Printed bottle holder",
+      "price": "$15",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/accessBotle.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Coloured sunglasses",
+      "price": "$25",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/accessGlas.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sporty platform sandals",
+      "price": "$25",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/accessShoes.jpg"
+    }
+  ],
+  "bikinies": [
+    {
+      "id": 1,
+      "name": "Printed triangle bikini",
+      "price": "$30",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/picture1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Thong bikini bottoms",
+      "price": "$35",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/picture2.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Printed triangle bikini",
+      "price": "$35",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/picture3.jpg"
+    }
+  ],
+  "swimsuits": [
+    {
+      "id": 1,
+      "name": "Printed swimming trunks",
+      "price": "$30",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/swim3.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Classic cut bottoms",
+      "price": "$30",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/swim1.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Texture Swimsuit",
+      "price": "$30",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/swim2.jpg"
+    }
+  ],
+  "newsummer": [
+    {
+      "id": 1,
+      "name": "Coloured sunglasses",
+      "price": "",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/accessGlas.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Printed bottle holder",
+      "price": "",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/accessBotle.jpg"
+    }
+  ],
+  "picksproducts": [
+    {
+      "id": 1,
+      "name": "Two-piece | Rainbow",
+      "price": "",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/swim-colors.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Two-piece | Blue",
+      "price": "",
+      "src": "https://katherine-na.github.io/swimsuit-shop-project/assets/images/swim-blue.jpg"
+    }
+  ]
+}

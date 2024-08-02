@@ -1,0 +1,106 @@
+@mixin nav_img {
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+    .nav-text {
+      .brand {
+        text-decoration: none;
+        color: black;
+      }
+      p {
+        font-size: 35px;
+        margin: 0;
+      }
+    }
+  
+    .nav-sections {
+      display: flex;
+      .nav-items {
+        margin: 0px 20px;
+        img {
+          @include nav_img;
+        }
+        p {
+          text-align: center;
+          color: black;
+          margin: 0;
+        }
+      }
+    }
+  
+    .nav-icons {
+      display: flex;
+      span {
+        margin-right: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .icon-login {
+          width: 30px;
+        }
+        .login {
+          text-decoration: none;
+          color: black;
+        }
+        .icon-cart {
+            width: 28px;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  
+  @media all and (max-width: 700px) {
+    nav {
+      padding: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      .nav-text {
+        margin: 30px 20px;
+        a {
+          font-size: 30px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+  
+      .nav-sections {
+        .nav-items {
+          img {
+            width: 70px;
+            height: 70px;
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+      .nav-icons {
+        display: none;
+      }
+    }
+  }
+  
+  @media all and (max-width: 1473px) {
+    nav {
+      .nav-text {
+        a {
+          font-size: 40px;
+        }
+        p {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  
