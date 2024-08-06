@@ -2,8 +2,14 @@ import React from 'react'
 import Image from 'next/image';
 import './HomeProducts.scss'
 
+interface HomeProductsProps {
+  items: {
+    src: string;
+    name: string;
+  };
+}
 
-const HomeProducts = ({items}) => {
+const HomeProducts: React.FC<HomeProductsProps> = ({ items }) => {
   return (
     <div className='home-products'>
       <div>

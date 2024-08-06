@@ -4,8 +4,16 @@ import Link from "next/link";
 import "./PLP.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+interface SwimsuitProps {
+  item: {
+    id: number;
+    name: string;
+    price: string;
+    src: string;
+  };
+}
 
-export default function PLP({ item }) {
+const PLP: React.FC<SwimsuitProps> = ({ item }) => {
   return (
     <div key={item.id} className="item-plp">
       <div className="product-img">
@@ -31,3 +39,5 @@ export default function PLP({ item }) {
     </div>
   );
 }
+
+export default PLP;

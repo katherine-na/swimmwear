@@ -1,3 +1,4 @@
+// page.tsx
 import React from 'react';
 import collections from '@/data/data.json';
 import PLP from '../components/PLP/PLP';
@@ -5,14 +6,15 @@ import PLP from '../components/PLP/PLP';
 interface Swimsuits {
   id: number; 
   name: string;
-  price: string; 
+  price: string;
+  src: string;
 }
 
 interface Data {
   swimsuits: Swimsuits[];
 }
 
-const page: React.FC = () => {
+const Page: React.FC = () => {
   const data: Data = collections;
 
   const swimsuits = data.swimsuits;
@@ -20,10 +22,10 @@ const page: React.FC = () => {
   return (
     <div className='PLP'>
       {swimsuits.map((item) => (
-        <PLP item={item}></PLP>
+        <PLP key={item.id} item={item} />
       ))}
     </div>
   );
 };
 
-export default page;
+export default Page;
