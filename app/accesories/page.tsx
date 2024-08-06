@@ -6,7 +6,8 @@ import './page.scss'
 interface Accesories {
   id: number; 
   name: string;
-  price: string; 
+  price: string;
+  src: string;
 }
 
 interface Data {
@@ -21,7 +22,7 @@ const page: React.FC = () => {
   return (
     <div className='PLP'>
       {accesorios.map((item) => (
-        <PLP item={item}></PLP>
+        <PLP key={item.id} item={item}></PLP>
       ))}
     </div>
   );

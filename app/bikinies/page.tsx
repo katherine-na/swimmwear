@@ -5,7 +5,8 @@ import PLP from '../components/PLP/PLP';
 interface Bikini {
   id: number; 
   name: string;
-  price: string; 
+  price: string;
+  src: string;
 }
 
 interface Data {
@@ -20,7 +21,7 @@ const page: React.FC = () => {
   return (
     <div className='PLP'>
       {bikinies.map((item) => (
-        <PLP item={item}></PLP>
+        <PLP key={item.id} item={item}></PLP>
       ))}
     </div>
   );

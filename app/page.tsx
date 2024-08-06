@@ -9,12 +9,14 @@ interface picksproducts {
   id: number;
   name: string;
   price: string;
+  src: string
 }
 
 interface newsummer {
   id: number;
   name: string;
   price: string;
+  src: string;
 }
 
 interface Data {
