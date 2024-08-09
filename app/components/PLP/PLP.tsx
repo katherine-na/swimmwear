@@ -2,8 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import "./PLP.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import Counter from "../counter/counter";
 interface SwimsuitProps {
   item: {
     id: number;
@@ -32,9 +31,7 @@ const PLP: React.FC<SwimsuitProps> = ({ item }) => {
           <p className="product-name">{item.name}</p>
           <p>{item.price}</p>
         </div>
-        <button>
-          Add to  <FontAwesomeIcon icon={faCartShopping} className="icon-cart" />
-        </button>
+        <Counter />
       </div>
     </div>
   );

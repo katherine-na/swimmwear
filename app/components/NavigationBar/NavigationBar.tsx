@@ -12,10 +12,12 @@ import {
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import { usePathname } from "next/navigation";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
 const NavigationBar = () => {
   const pathname = usePathname();
-  console.log(pathname);
+  const count = useSelector((state: RootState) => state.counter.count)
 
   return (
     <div>
@@ -55,14 +57,19 @@ const NavigationBar = () => {
           </div>
         </div>
         <div className="nav-icons">
-          <span>
+          <div>
             <FontAwesomeIcon icon={faRightToBracket} className="icon-login" />
-            <Link href="/login" className="login">Log in</Link>
-          </span>
-          <span>
+            <Link href="/login" className="login">
+              Log in
+            </Link>
+          </div>
+          <div>
+            <div className="cart-counter">
+              <p>{count}</p>
+            </div>
             <FontAwesomeIcon icon={faCartShopping} className="icon-cart" />
             <p>Cart</p>
-          </span>
+          </div>
         </div>
       </nav>
     </div>
