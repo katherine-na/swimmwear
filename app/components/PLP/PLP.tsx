@@ -16,7 +16,7 @@ const PLP: React.FC<SwimsuitProps> = ({ item }) => {
   return (
     <div key={item.id} className="item-plp">
       <div className="product-img">
-        <Link href={`/bikini/${item.id}`}>
+        <Link href="/login">
           <Image
             src={item.src}
             width={180}

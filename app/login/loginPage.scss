@@ -1,0 +1,14 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login-text {
+        text-align: center;
+        font-size: 30px;
+        width: 500px;
+        margin-block: 90px;
+        span {
+            font-size: 35px;
+        }
+    }
+}
