@@ -13,6 +13,7 @@
       .brand {
         text-decoration: none;
         color: black;
+        font-size: 35px;
       }
       p {
         font-size: 35px;
@@ -24,6 +25,9 @@
       display: flex;
       .nav-items {
         margin: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         img {
           @include nav_img;
         }
@@ -74,47 +78,29 @@
   }
   
   @media all and (max-width: 700px) {
-    nav {
-      padding: 0;
-      flex-direction: column;
-      align-items: flex-start;
-      .nav-text {
-        margin: 30px 20px;
-        a {
-          font-size: 30px;
-        }
-        p {
-          font-size: 20px;
-        }
-      }
-  
-      .nav-sections {
-        .nav-items {
-          img {
-            width: 70px;
-            height: 70px;
-          }
-          p {
-            font-size: 13px;
-          }
-        }
-      }
-      .nav-icons {
-        display: none;
+   nav {
+    flex-direction: column;
+    .nav-text {
+      text-align: center;
+      p {
+        font-size: 25px;
       }
     }
-  }
-  
-  @media all and (max-width: 1473px) {
-    nav {
-      .nav-text {
-        a {
-          font-size: 40px;
+    .nav-sections {
+      margin-block: 15px;
+      .nav-items {
+        img {
+          width: 65px;
+          height: 65px;
         }
         p {
-          font-size: 25px;
+          font-size: 14px;
         }
       }
     }
+    .nav-icons {
+      display: none;
+    }
+   } 
   }
   

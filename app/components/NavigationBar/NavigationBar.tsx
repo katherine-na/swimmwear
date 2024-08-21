@@ -17,7 +17,7 @@ import { RootState } from "../../redux/store";
 
 const NavigationBar = () => {
   const pathname = usePathname();
-  const count = useSelector((state: RootState) => state.counter.count)
+  const count = useSelector((state: RootState) => state.counter.count);
 
   return (
     <div>

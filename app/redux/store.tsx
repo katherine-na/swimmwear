@@ -1,6 +1,6 @@
 // store.ts
 import { createStore } from 'redux';
-import rootReducer from './reducers'; // Asegúrate de que la ruta sea correcta
+import rootReducer from './reducers';
 
 const store = createStore(rootReducer);
 

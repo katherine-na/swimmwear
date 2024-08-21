@@ -1,55 +1,74 @@
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 185px;
+  background: linear-gradient(to bottom, #ffffff97, #f0ddfcef);
+  margin-top: 50px;
+  .footer-text {
+    width: 20%;
+    .footer-brand {
+      font-size: 30px;
+      margin: 5px;
+    }
+  }
+  .footer-follow-us {
+    p {
+      margin: 6px;
+    }
+    width: 20%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 185px;
-    background: linear-gradient(to bottom, #ffffff97, #f0ddfcef);
-    margin-top: 50px;
+    .icons {
+      display: flex;
+      align-items: center;
+      .icon {
+        width: 30px;
+        margin-inline: 5px;
+      }
+    }
+  }
+  .footer-call-us {
+    p {
+      margin: 2px;
+    }
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-email {
+    p {
+      margin-bottom: 3px;
+    }
+    input {
+      width: 250px;
+      height: 30px;
+    }
+    button {
+      height: 36px;
+      width: 100px;
+      margin-inline: 5px;
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  .footer {
     .footer-text {
-        width: 20%;
-        .footer-brand {
-            font-size: 30px;
-            margin: 5px;
-        }
+      p {
+        display: none;
+      }
     }
     .footer-follow-us {
-        p {
-            margin: 6px;
-        }
-        width: 20%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .icons {
-            display: flex;
-            align-items: center;
-            .icon {
-                width: 30px;
-                margin-inline: 5px;
-            }
-        }
+        width: 100%;
     }
     .footer-call-us {
-        p {
-            margin: 2px;
-        }
-        width: 20%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
     }
     .footer-email {
-        p {
-            margin-bottom: 3px;
-        }
-        input {
-            width: 250px;
-            height: 30px;
-        }
-        button {
-            height: 36px;
-            width: 100px;
-            margin-inline: 5px;
-        }
+        display: none;
     }
+  }
 }
